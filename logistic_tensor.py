@@ -37,6 +37,7 @@ learning_rate = 0.01
 
 # Hypothesis and Prediction Function
 def predict(X):
+    #행렬곱하는 함수(벡 스칼라의 곱)
     z = tf.matmul(X, W) + b
     hypothesis = 1 / (1 + tf.exp(-z))
     return hypothesis
@@ -54,8 +55,8 @@ for i in range(2000+1):
         b.assign_sub(learning_rate * b_grad)
 
     if i % 400 == 0:
-        print(">>> #%s \n Weights: \n%s \n Bias: \n%s \n cost: %s\n" % (i, W.numpy(), b.numpy(), cost.numpy()))
+        print(">>> #%s \n Weights:%s \n Bias: %s \n cost: %s\n" % (i, W.numpy(), b.numpy(), cost.numpy()))
 
-hypo = predict(x_test)
-print("Prob: \n", hypo.numpy())
-print("Result: \n", tf.cast(hypo > 0.5, dtype=tf.float32).numpy())
+hypothesis = predict(x_test)
+print("Prob: \n", hypothesis.numpy())
+print("Result: \n", tf.cast(hypothesis > 0.5, dtype=tf.float32).numpy())
