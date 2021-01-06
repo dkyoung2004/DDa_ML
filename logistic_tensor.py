@@ -59,4 +59,4 @@ for i in range(2000+1):
 
 hypothesis = predict(x_test)
 print("Prob: \n", hypothesis.numpy())
-print("Result: \n", tf.cast(hypothesis > 0.5, dtype=tf.float32).numpy())
+print("Result: \n",tf.cast(hypothesis > 0.5, dtype=tf.float32).numpy())
