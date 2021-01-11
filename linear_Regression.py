@@ -38,7 +38,7 @@ for p in range(200):
     figure.canvas.flush_events()
     time.sleep(0.1)
 for i in range(1,400):
-    W,b = logistic_recent(X,Y,W,b,lr)
+    W,b =decent(X,Y,W,b,lr)
     print("W:",W,"b:",b)
 """
 def animate(x,y,W,b,lr):
