@@ -7,6 +7,7 @@ y = np.array([[0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 1, 0], [0, 1, 0], [0, 1, 0], 
 learning_rate = 0.01
 W = tf.Variable(tf.random.normal([8, 4]))
 b = tf.Variable(tf.random.normal([8,3]))
+##변수 생성해서 메모리에 입
 def softmax(W,x,y):
     
     return 0
