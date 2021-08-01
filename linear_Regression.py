@@ -14,14 +14,14 @@ def decent(x,y,W,b,lr):
     #일차함수에서 비롯된 y의 값과 본 데이터셋의 y값의 차이를 제곱하고, 데이터의 개수만큼 나눠주는데, 미분을 하면
     #지수가 계수로 가는 것을 인지하고 2로도 한번 더 나눠줌
     cost = np.sum((W*x+b-y)**2)/len(x)
-    gradient_W =np.sum((W*x+b-y)*2*x)/len(x) #위에 코스트 함수를 미분한 것
+    gradient_W =np.sum((W*x+b-y)*x)/len(x) #위에 코스트 함수를 미분한 것
     gradient_b =np.sum((W*x+b-y)*2)/len(x) #y값의 오차 만 봄 어차피 더하기 빼기만 하면되니께
     W -= lr*gradient_W
     b -= lr*gradient_b
-    return cost,W
-lr =0.002
-for i in range (1,300):
-    cost,W = decent(x,y,W,b,lr)
-    print("cost:",cost,"W",W)
+    return cost,W,b
+lr =0.001
+for i in range (1,10000):
+    cost,W,b = decent(x,y,W,b,lr)
+    print("cost:",cost,"W",W,"b : ", b)
 
 
