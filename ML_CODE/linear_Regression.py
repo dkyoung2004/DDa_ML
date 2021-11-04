@@ -23,7 +23,7 @@ def decent(x,y,W,b,lr):
     W -= lr*gradient_W
     b -= lr*gradient_b
     return cost,W
-lr =0.001
+lr =0.003
 
 for i in range(1,800):
     cost,W =decent(x,y,W,b,lr)
