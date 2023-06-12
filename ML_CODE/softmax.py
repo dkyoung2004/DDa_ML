@@ -7,8 +7,8 @@ x=  np.array([[1, 2, 1, 1], [2, 1, 3, 2], [3, 1, 3, 4], [4, 1, 5, 5], [1, 7, 5, 
 y = np.array([[0, 0, 1], [0, 0, 1], [0, 0, 1], [0, 1, 0], [0, 1, 0], [0, 1, 0], [1, 0, 0], [1, 0, 0]]) 
 # 라벨링
 learning_rate = 0.01
-W = tf.Variable(tf.random.normal([8, 4]),dtype=int32)
-b = tf.Variable(tf.random.normal([8,3]),dtype=int32)
+W = tf.Variable(tf.random.normal([8, 4]))
+b = tf.Variable(tf.random.normal([8,3]))
 #초기는 랜덤한 가중치 행렬 부여
 ##변수 생성해서 메모리에 저장
 
