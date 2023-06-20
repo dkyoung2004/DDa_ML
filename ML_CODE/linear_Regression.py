@@ -25,7 +25,7 @@ def decent(x,y,W,b,lr):
     return cost,W
 lr =0.003
 
-for i in range(1,4000):
+for i in range(1,1000):
     cost,W =decent(x,y,W,b,lr)
     print("W:",W,"cost:",cost)
 plt.plot(x,y)
